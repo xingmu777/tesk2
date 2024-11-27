@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            display: block;
+            width: 200px;
+            height: 100px;
+            margin: 10px auto;
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 100px;
+            background-color: red;
+            border-radius: 50px;
+            outline: 3px solid #777;
+        }
+
+        a:hover {
+            color: black;
+            background-color: green;
+            box-shadow: 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">首页</a>
+    <a href="3.html">刷新</a>
+</body>
+<script>
+    var a = prompt("请输入包含——和字母的字符串：");
+    var b = a.split("——");
+    var c = '';
+    c += b[0];
+    for (var i = 1;i<b.length;i++) {
+        for(var j = 0; j < b[i].length; j++) {
+            if((b[i][j]>="a"&&b[i][j]<="z")||(b[i][j]>="A"&&b[i][j]<="Z")){
+                if (j === 0 && (b[i][j]>="a"&&b[i][j]<="z")) {
+                    c += b[i][j].toUpperCase();
+                } else {
+                    c += b[i][j];
+                }
+            } else c += b[i][j];
+        }
+    }
+    alert(c);
+</script>
+</html>
