@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            display: block;
+            width: 200px;
+            height: 100px;
+            margin: 10px auto;
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 100px;
+            background-color: red;
+            border-radius: 50px;
+            outline: 3px solid #777;
+        }
+
+        a:hover {
+            color: black;
+            background-color: green;
+            box-shadow: 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">首页</a>
+    <a href="练习2.html">刷新</a>
+</body>
+<script>
+    var c3 = prompt("请输入下划线命名：");
+    var c4 = c3.split("_");
+    var c5 = '帕斯卡命名法：';
+    var c6 = "驼峰命名法：";
+    for (var i = 0;i<c4.length;i++) {
+        for(var j = 0; j < c4[i].length; j++) {
+            if (j === 0) {
+                c5 += c4[i][j].toUpperCase();
+            } else {
+                c5 += c4[i][j];
+            }
+        }
+    }
+    c6 += c4[0];
+    for (var i = 1;i<c4.length;i++) {
+        for(var j = 0; j < c4[i].length; j++) {
+            if (j === 0) {
+                c6 += c4[i][j].toUpperCase();
+            } else {
+                c6 += c4[i][j];
+            }
+        }
+    }
+    alert(c5+c6);
+</script>
+</html>

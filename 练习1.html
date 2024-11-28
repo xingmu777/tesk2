@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            display: block;
+            width: 200px;
+            height: 100px;
+            margin: 10px auto;
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 100px;
+            background-color: red;
+            border-radius: 50px;
+            outline: 3px solid #777;
+        }
+
+        a:hover {
+            color: black;
+            background-color: green;
+            box-shadow: 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">首页</a>
+    <a href="练习1.html">刷新</a>
+</body>
+<script>
+    var c1 = prompt("请输入16进制3位或6位：");
+    var c2 = '';
+    if (c1.length == 3) {
+        for (var i = 0; i<3;i++) {
+            c2 += parseInt(c1[i]+c1[i],16) +",";
+        }
+    }
+    if (c1.length == 6) {
+        for (var i = 0; i<6;i+=2) {
+            c2 += parseInt(c1[i]+c1[i+1],16) +",";
+        }
+    }
+    alert(c2);
+</script>
+</html>
